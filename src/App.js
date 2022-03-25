@@ -16,7 +16,7 @@ function App() {
   }
   const handleLogin=async(googleData)=>{
        console.log(googleData);
-       const res = await fetch('/api/google-login',{
+       const res = await fetch('https://node-google-login.herokuapp.com/api/google-login',{
          method:'POST',
          body: JSON.stringify({
            token:googleData.tokenId,
