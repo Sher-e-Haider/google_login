@@ -17,10 +17,15 @@ function upsert(array,item){
     else{
         array.push(item)
     }
+    console.log(array);
 }
+app.get('/',(req,res)=>{
+    res.send('server running')
+})
 
 app.post('/api/google-login',async(req,res)=>{
     const {token} = req.body
+    console.log(token,'token');
     const ticket = await client.verifyIdToken({
         idToken:token,
         audience:process.env.CLIENT_ID
