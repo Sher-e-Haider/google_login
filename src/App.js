@@ -10,9 +10,9 @@ function App() {
       ? JSON.parse(localStorage.getItem('loginData'))
       :null
   );
-  
+  //https://node-google-login.herokuapp.com
   const handleFailure=(res)=>{
-      alert(res)
+     console.log(res);
   }
   const handleLogin=async(googleData)=>{
        console.log(googleData);
