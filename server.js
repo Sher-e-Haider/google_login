@@ -22,7 +22,7 @@ function upsert(array,item){
     console.log(array);
 }
 app.get('/',(req,res)=>{
-    res.send('server running')
+    res.send('app---running')
 })
 
 app.post('/api/google-login',async(req,res)=>{
