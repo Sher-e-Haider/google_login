@@ -2,11 +2,13 @@ const express = require('express')
 const dotenv = require('dotenv')
 const {OAuth2Client} = require('google-auth-library')
 const path =require('path')
+const cors= require('cors')
 
 dotenv.config()
 const client = new OAuth2Client(process.env.REACT_APP_GOOGLE_CLIENT_ID)
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 const users = []
